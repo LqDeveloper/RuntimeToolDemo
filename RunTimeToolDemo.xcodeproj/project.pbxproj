@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5123148D1F564A85001B88D1 /* NSObject+Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 5123148C1F564A85001B88D1 /* NSObject+Type.m */; };
+		512314991F565A96001B88D1 /* Person+Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 512314981F565A96001B88D1 /* Person+Type.m */; };
 		51B01D141F551F360087BBD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B01D131F551F360087BBD4 /* main.m */; };
 		51B01D1C1F551F4A0087BBD4 /* RunTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B01D1B1F551F4A0087BBD4 /* RunTimeTool.m */; };
 		51B01D1F1F551F900087BBD4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B01D1E1F551F900087BBD4 /* Person.m */; };
@@ -25,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5123148B1F564A85001B88D1 /* NSObject+Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Type.h"; sourceTree = "<group>"; };
+		5123148C1F564A85001B88D1 /* NSObject+Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Type.m"; sourceTree = "<group>"; };
+		512314971F565A96001B88D1 /* Person+Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+Type.h"; sourceTree = "<group>"; };
+		512314981F565A96001B88D1 /* Person+Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+Type.m"; sourceTree = "<group>"; };
 		51B01D101F551F360087BBD4 /* RunTimeToolDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RunTimeToolDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B01D131F551F360087BBD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51B01D1A1F551F4A0087BBD4 /* RunTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimeTool.h; sourceTree = "<group>"; };
@@ -68,6 +74,10 @@
 				51B01D1A1F551F4A0087BBD4 /* RunTimeTool.h */,
 				51B01D1B1F551F4A0087BBD4 /* RunTimeTool.m */,
 				51B01D131F551F360087BBD4 /* main.m */,
+				5123148B1F564A85001B88D1 /* NSObject+Type.h */,
+				5123148C1F564A85001B88D1 /* NSObject+Type.m */,
+				512314971F565A96001B88D1 /* Person+Type.h */,
+				512314981F565A96001B88D1 /* Person+Type.m */,
 			);
 			path = RunTimeToolDemo;
 			sourceTree = "<group>";
@@ -132,6 +142,8 @@
 				51B01D1F1F551F900087BBD4 /* Person.m in Sources */,
 				51B01D1C1F551F4A0087BBD4 /* RunTimeTool.m in Sources */,
 				51B01D141F551F360087BBD4 /* main.m in Sources */,
+				512314991F565A96001B88D1 /* Person+Type.m in Sources */,
+				5123148D1F564A85001B88D1 /* NSObject+Type.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

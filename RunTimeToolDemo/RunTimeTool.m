@@ -109,15 +109,56 @@
             if ([object respondsToSelector:selector]) {
                 [object performSelector:selector];
             }
+            free(methodList);
             return YES;
         }
     }
-    
+    free(methodList);
     return NO;
 }
 
 
-
-
++(void)addProtertyWithObject:(id)object andPropertyName:(NSString *)propertyName andValue:(NSString *)value{
+    
+    Class className = [object class];
+    
+    unsigned int count;
+    
+    objc_property_t *propertyList = class_copyPropertyList(className, &count);
+    
+    for (int i = 0; i < count; i++) {
+        objc_property_t property = propertyList[i];
+        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
+        if ([name isEqualToString:propertyName]) {
+            free(propertyList);
+            return;
+        }
+    }
+    
+    const char *charName = [propertyName cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    objc_setAssociatedObject(object, charName, value, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
+    free(propertyList);
+}
++(id)getProtertyWithObject:(id)object andPropertyName:(NSString *)propertyName{
+    
+    Class className = [object class];
+    
+    unsigned int count;
+    
+    objc_property_t *propertyList = class_copyPropertyList(className, &count);
+    
+    for (int i = 0; i < count; i++) {
+        objc_property_t proterty = propertyList[i];
+        NSString *name  =  [NSString stringWithUTF8String:property_getName(proterty)];
+        if ([name isEqualToString:propertyName]){
+            free(propertyList);
+            return objc_getAssociatedObject(object, [propertyName cStringUsingEncoding:NSASCIIStringEncoding]);
+        }
+    }
+    free(propertyList);
+    return nil;
+}
 
 @end

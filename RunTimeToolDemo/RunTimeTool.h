@@ -17,5 +17,8 @@
 +(NSArray *)getMethodNameFromObject:(NSString *)objectName;
 //执行某个类的某个方法
 +(BOOL)executeMethodWithObject:(NSString *)objectName andMethodName:(NSString *)methodName;
+//动态添加属性
++(void)addProtertyWithObject:(id)object andPropertyName:(NSString *)propertyName andValue:(NSString *)value;
+
 
 @end
